@@ -28,10 +28,10 @@ MySql은 프로세스가 아닌 스레드 기반으로 동작한다. 스레드�
    해당 스레드는 서버에 접속한 클라이언트 수만큼 존재함. 각 클라이언트는 사용자가 요청한 쿼리를 처리한다. 사용자가 작업을 마치고 세션이 종료되면 해당 스레드는 스레드 캐시로 반환된다. 캐시에 들어갈 수 있는 스레드 수는 사용자 설정에 의해 제한되며 스레드 캐시로 인해 같은 클이언트가 서버에 다시 접속했을 때의 오버헤드를 줄인다. InnoDB 에서는 메모리에 대한 읽기/쓰기 작업만 해당 스레드가 담당한다.
 2. Background Thread
    InnoDB는 많은 작업을 Background Thread가 수행한다. InnoDB 엔진의 주요 백그라운드 스레드는 다음과 같다: Master Thread, Insert Buffer Thread, Log thread, Read Thread, Writ thread, Page Cleaner thread, Purge thread
-      - Master thread
+      - Master thread:
          백그라운드 스레드 관리 및 다양한 태스크의 스케줄링 담당. Buffer pool의 데이터를 디스크로 비동기 Flush.
-      - Insert Buffer thread
+      - Insert Buffer thread: 
          Insert buffer를 Merge한다.
-      - Read/Write Thread
+      - Read/Write Thread: 
          읽기/쓰기 요청을 처리한다
 
