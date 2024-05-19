@@ -42,6 +42,6 @@ Secondary Index
 3. Double Write Buffer
    InnoDB는 Data 손실을 방지하기 위해 DoubleWrite 라는 파일 Flush 기능을 사용한다. Buffer Pool로부터 Flush 된 page를 Data 파일에 쓰기 전에 저장하는 영역으로 디스크상에 파일로 존재한다. 
 
-1.	Buffer Pool의 페이지가 한 번에 flush 된다.
-2.	여러 페이지가 double write 버퍼에 write 한다. 
-3.	Double write 버퍼에 쓰인 페이지들을 순차적으로 버퍼 풀에서 디스크로 쓴다. 
+   1.	Buffer Pool의 페이지가 한 번에 flush 된다.
+   2.	여러 페이지가 double write 버퍼에 write 한다. 
+   3.	Double write 버퍼에 쓰인 페이지들을 순차적으로 버퍼 풀에서 디스크로 쓴다. 
