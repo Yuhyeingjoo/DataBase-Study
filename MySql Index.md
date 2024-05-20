@@ -52,10 +52,11 @@ CREATE TABLE employee (
     emp_no INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(64),
     PRIMARY KEY(emp_no),
-    INDEX idx_name (name)
+   
 ) ENGINE=InnoDB;
-출처: https://mangkyu.tistory.com/286 [MangKyu's Diary:티스토리]
 ```
 ![image](https://github.com/Yuhyeingjoo/DataBase-Study/assets/54518241/a6dfcdda-4091-4587-a663-42877724287c)
+
+원하는 데이터를 접근할 때 페이지 번호를 향해 리프 노드로 내려 가는 과정이 O(n)이 소요도지 않고 O(logN)이 소요된다.
 
 
